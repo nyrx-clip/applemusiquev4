@@ -348,6 +348,7 @@ body {
   position:fixed; bottom:0; left:0; right:0;
   z-index:100;
   padding:0 12px calc(var(--safe-b) + 8px);
+  background:var(--bg);
 }
 @media(min-width:701px){ #player-bar { left:var(--sidebar-w); } }
 #player-pill {
@@ -1350,7 +1351,7 @@ body {
             <button class="modal-btn secondary" style="margin:0;width:100%;color:#ff453a" onclick="clearAllData()">🗑️ Effacer toutes les données</button>
           </div>
           <div class="section" style="padding:0;margin-bottom:20px">
-            <div class="section-hd"><div class="section-title">ℹ️ à€ propos</div></div>
+            <div class="section-hd"><div class="section-title">ℹ️ À propos</div></div>
             <div style="font-size:14px;color:var(--text2);line-height:1.8">
               <div><strong style="color:var(--text1)">Coco Music</strong></div>
               <div>Version 3.0.0</div>
@@ -1479,7 +1480,7 @@ body {
       </button>
       <button class="fp-extra" onclick="cycleSpeed()" id="fp-speed">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-        <span id="fp-speed-lbl">1à—</span>
+        <span id="fp-speed-lbl">1×</span>
       </button>
     </div>
   </div>
@@ -1854,8 +1855,8 @@ function cycleSpeed() {
   const i = sp.indexOf(playSpeed);
   playSpeed = sp[(i+1)%sp.length];
   audio.playbackRate = playSpeed;
-  $('fp-speed-lbl').textContent = playSpeed + 'à—';
-  toast(`Vitesse ${playSpeed}à—`);
+  $('fp-speed-lbl').textContent = playSpeed + '×';
+  toast(`Vitesse ${playSpeed}×`);
 }
 
 function openAirPlay() {
